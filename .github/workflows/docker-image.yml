@@ -17,10 +17,10 @@ jobs:
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.jeambatite }}
-          password: ${{ secrets.capotillo07 }}
+          password: ${{ secrets.dckr_pat_LtX4a3B439dquVl4fwwZYOpnQ6I }}
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/miapp:latest .
+        run: docker build -t ${{ secrets.jeambatite }}/miapp:latest .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/miapp:latest
+        run: docker push ${{ secrets.jeambatite }}/miapp:latest
